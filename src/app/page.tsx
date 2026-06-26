@@ -120,7 +120,7 @@ export default async function Home() {
 
             <div className="text-[#1C3658] text-base md:text-lg lg:text-xl xl:text-2xl space-y-2">
               <p className="font-bold">
-                Do you want to receive Bashwish news and offers?
+                Do you want to receive DEMO news and offers?
               </p>
               <p>Join our community:</p>
             </div>

@@ -156,7 +156,7 @@ export function VendorClaimForm() {
         <CardHeader>
           <CardTitle>Vendor Application</CardTitle>
           <CardDescription>
-            Join Bashwish and start receiving leads for your party venue.
+            Join DEMO and start receiving leads for your party venue.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -173,8 +173,8 @@ export function VendorClaimForm() {
                 errors.contactName
                   ? "border-red-500 focus-visible:ring-red-500"
                   : dirtyFields.contactName && !errors.contactName
-                  ? "border-green-500 focus-visible:ring-green-500"
-                  : ""
+                    ? "border-green-500 focus-visible:ring-green-500"
+                    : ""
               }
             />
             <FieldError message={errors.contactName?.message} />
@@ -194,8 +194,8 @@ export function VendorClaimForm() {
                 errors.contactEmail
                   ? "border-red-500 focus-visible:ring-red-500"
                   : dirtyFields.contactEmail && !errors.contactEmail
-                  ? "border-green-500 focus-visible:ring-green-500"
-                  : ""
+                    ? "border-green-500 focus-visible:ring-green-500"
+                    : ""
               }
             />
             <FieldError message={errors.contactEmail?.message} />
@@ -214,7 +214,7 @@ export function VendorClaimForm() {
               {...register("contactPhone")}
               className={getInputClassName(
                 !!errors.contactPhone,
-                !!touchedFields.contactPhone
+                !!touchedFields.contactPhone,
               )}
             />
             <FieldError message={errors.contactPhone?.message} />
@@ -229,7 +229,7 @@ export function VendorClaimForm() {
               {...register("businessName")}
               className={getInputClassName(
                 !!errors.businessName,
-                !!touchedFields.businessName
+                !!touchedFields.businessName,
               )}
             />
             <FieldError message={errors.businessName?.message} />
@@ -245,7 +245,7 @@ export function VendorClaimForm() {
               {...register("website")}
               className={getInputClassName(
                 !!errors.website,
-                !!touchedFields.website
+                !!touchedFields.website,
               )}
             />
             <FieldError message={errors.website?.message} />

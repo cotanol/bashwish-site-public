@@ -13,18 +13,18 @@ interface DetailVenueTabProps {
 export default function DetailVenueTab({ venue }: DetailVenueTabProps) {
   // Compute data from packages
   const allThemes = venue.packages.flatMap((pkg) =>
-    pkg.themes.map((t) => t.theme)
+    pkg.themes.map((t) => t.theme),
   );
   const uniqueThemes = Array.from(
-    new Map(allThemes.map((theme) => [theme.id, theme])).values()
+    new Map(allThemes.map((theme) => [theme.id, theme])).values(),
   );
 
   const ageMin = Math.min(
-    ...venue.packages.map((pkg) => pkg.ageMin || 0).filter((age) => age > 0)
+    ...venue.packages.map((pkg) => pkg.ageMin || 0).filter((age) => age > 0),
   );
   const ageMax = Math.max(...venue.packages.map((pkg) => pkg.ageMax || 100));
   const minKids = Math.min(
-    ...venue.packages.map((pkg) => pkg.minKids || 0).filter((kids) => kids > 0)
+    ...venue.packages.map((pkg) => pkg.minKids || 0).filter((kids) => kids > 0),
   );
   const maxKids = Math.max(...venue.packages.map((pkg) => pkg.maxKids || 0));
 
@@ -140,7 +140,8 @@ export default function DetailVenueTab({ venue }: DetailVenueTabProps) {
                   <Ticket className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <span className="font-semibold">Starting Price</span>
-                    {venue.discountPrice && venue.discountPrice < (venue.startingPrice || 0) ? (
+                    {venue.discountPrice &&
+                    venue.discountPrice < (venue.startingPrice || 0) ? (
                       <div className="flex items-center gap-2">
                         <span className="text-sm text-gray-400 line-through">
                           ${venue.startingPrice}
@@ -220,7 +221,7 @@ export default function DetailVenueTab({ venue }: DetailVenueTabProps) {
                   <Card key={pkg.id} className="flex flex-col h-full relative">
                     {pkg.discountPrice && pkg.discountPrice < pkg.price && (
                       <span className="absolute -top-3 -right-3 bg-[#FF6B6B] text-white text-xs px-3 py-1.5 rounded-full font-bold shadow-lg z-10">
-                        💰 BashWish Discount
+                        💰 DEMO Discount
                       </span>
                     )}
                     <CardHeader>

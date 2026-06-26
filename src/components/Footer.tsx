@@ -35,7 +35,7 @@ export default function Footer() {
               Texas, Estados Unidos
             </p>
             <p className="text-sm sm:text-base">Call Us: +31 (0) 123 456 789</p>
-            <p className="text-sm sm:text-base">hello@bashwish.com</p>
+            <p className="text-sm sm:text-base">hello@DEMO.com</p>
           </div>
 
           {/* Imágenes izquierda - Se mueve después de Useful Links en mobile */}
@@ -150,7 +150,7 @@ export default function Footer() {
         </div>
         <div className="max-w-7xl mx-auto py-3 px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm sm:text-base text-center md:text-left">
-            Copyright @2025. All Right Reserved by Bashwish.
+            Copyright @2025. All Right Reserved by DEMO.
           </p>
         </div>
       </div>

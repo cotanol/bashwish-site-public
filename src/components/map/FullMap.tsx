@@ -67,7 +67,7 @@ interface FullMapProps {
 const FullMap = ({ locations }: FullMapProps) => {
   const [selectedId, setSelectedId] = useState<string | number | null>(null);
   const selectedLocation = locations.find(
-    (l) => String(l.id) === String(selectedId)
+    (l) => String(l.id) === String(selectedId),
   );
 
   const initialCenter: [number, number] =
@@ -102,7 +102,7 @@ const FullMap = ({ locations }: FullMapProps) => {
             position={[loc.lat, loc.lng]}
             icon={createPriceIcon(
               loc.price,
-              String(selectedId) === String(loc.id)
+              String(selectedId) === String(loc.id),
             )}
             eventHandlers={{
               click: () => setSelectedId(loc.id),
@@ -183,7 +183,7 @@ const FullMap = ({ locations }: FullMapProps) => {
                       </span>
                     </div>
                     <span className="text-xs text-[#F8BD36] font-medium">
-                      💰 BashWish Special
+                      💰 DEMO Special
                     </span>
                   </>
                 ) : (
