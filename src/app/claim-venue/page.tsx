@@ -19,10 +19,10 @@ export default function ClaimVenuePage() {
         {/* Contenido principal */}
         <div className="relative z-10 px-4 md:px-6">
           <h1 className="text-[#FBF2E0] text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold max-w-4xl mx-auto">
-            Add Your Venue to Bashwish
+            Add Your Venue to DEMO
           </h1>
           <p className="text-[#FBF2E0] mt-2 md:mt-3 lg:mt-4 text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
-            Partner with Bashwish and reach more families
+            Partner with DEMO and reach more families
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export default function ClaimVenuePage() {
           <Card className="mb-8 bg-blue-50 border-blue-200">
             <CardHeader>
               <CardTitle className="text-2xl text-[#1C3658]">
-                Why Partner with Bashwish?
+                Why Partner with DEMO?
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -89,10 +89,10 @@ export default function ClaimVenuePage() {
                 <li>
                   📧 Email:{" "}
                   <a
-                    href="mailto:hello@bashwish.com"
+                    href="mailto:hello@DEMO.com"
                     className="text-blue-600 hover:underline"
                   >
-                    hello@bashwish.com
+                    hello@DEMO.com
                   </a>
                 </li>
                 <li>📞 Phone: (555) 123-4567</li>

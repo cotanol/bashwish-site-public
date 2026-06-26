@@ -13,8 +13,9 @@ const baloo = Baloo_Chettan_2({
 });
 
 export const metadata: Metadata = {
-  title: "BashWish",
-  description: "",
+  title: "DEMO | Multitenant SaaS for Party Venues | Lead Tracking",
+  description:
+    "A multitenant SaaS platform for party venues to track leads and manage their business.",
 };
 
 export default function RootLayout({

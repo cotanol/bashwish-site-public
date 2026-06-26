@@ -71,7 +71,7 @@ export default function Header() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo-cortado.png"
-              alt="BashWish"
+              alt="DEMO"
               className="h-12 w-auto md:h-16"
             />
           </Link>

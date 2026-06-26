@@ -20,8 +20,12 @@ export default function ServiceCard({
     "/party-genie.png"; // Default fallback image
 
   // Check if service has a discount or any package has a discount
-  const hasDiscount = (service.discountPrice && service.discountPrice < (service.startingPrice || 0)) || 
-                      service.packages?.some(pkg => pkg.discountPrice && pkg.discountPrice < pkg.price);
+  const hasDiscount =
+    (service.discountPrice &&
+      service.discountPrice < (service.startingPrice || 0)) ||
+    service.packages?.some(
+      (pkg) => pkg.discountPrice && pkg.discountPrice < pkg.price,
+    );
 
   if (variant === "compact") {
     return (
@@ -40,7 +44,7 @@ export default function ServiceCard({
           )}
           {hasDiscount && (
             <span className="absolute top-3 right-3 bg-[#FF6B6B] text-white text-xs px-3 py-1.5 rounded-full font-bold shadow-lg">
-              💰 BashWish Discount
+              💰 DEMO Discount
             </span>
           )}
           {service.specialOffer && (
@@ -60,7 +64,10 @@ export default function ServiceCard({
             <div className="mb-3">
               {(() => {
                 // Check service discount first
-                if (service.discountPrice && service.discountPrice < service.startingPrice) {
+                if (
+                  service.discountPrice &&
+                  service.discountPrice < service.startingPrice
+                ) {
                   return (
                     <div className="flex items-center gap-2">
                       <span className="text-sm font-bold text-gray-400 line-through">
@@ -72,14 +79,17 @@ export default function ServiceCard({
                     </div>
                   );
                 }
-                
+
                 // Otherwise check package discounts
                 const lowestDiscount = service.packages
-                  ?.filter(pkg => pkg.discountPrice)
-                  .map(pkg => Number(pkg.discountPrice))
+                  ?.filter((pkg) => pkg.discountPrice)
+                  .map((pkg) => Number(pkg.discountPrice))
                   .sort((a, b) => a - b)[0];
-                
-                if (lowestDiscount && lowestDiscount < Number(service.startingPrice)) {
+
+                if (
+                  lowestDiscount &&
+                  lowestDiscount < Number(service.startingPrice)
+                ) {
                   return (
                     <div className="flex items-center gap-2">
                       <span className="text-sm font-bold text-gray-400 line-through">
@@ -101,7 +111,11 @@ export default function ServiceCard({
           )}
           <div className="flex gap-2">
             <Link href={`/services/${service.slug}`} className="flex-1">
-              <Button variant="golden" size="golden" className="w-full cursor-pointer">
+              <Button
+                variant="golden"
+                size="golden"
+                className="w-full cursor-pointer"
+              >
                 More info
               </Button>
             </Link>
@@ -112,7 +126,11 @@ export default function ServiceCard({
                 targetType="SERVICE"
                 className="flex-1"
               >
-                <Button variant="golden" size="golden" className="w-full cursor-pointer">
+                <Button
+                  variant="golden"
+                  size="golden"
+                  className="w-full cursor-pointer"
+                >
                   Reserve Service
                 </Button>
               </TrackableLink>
@@ -128,7 +146,10 @@ export default function ServiceCard({
     <div className="flex flex-col sm:flex-row items-stretch gap-6 bg-white rounded-2xl border-2 border-[#000000] shadow-[4px_4px_0_#000000] hover:shadow-[6px_6px_0_#000000] hover:-translate-y-1 transition-all duration-300 p-6 h-auto">
       {/* Image Container - Fixed width, full height */}
       <div className="relative w-full sm:w-[280px] h-[200px] sm:h-[240px] flex-shrink-0 rounded-xl overflow-hidden">
-        <Link href={`/services/${service.slug}`} className="block w-full h-full cursor-pointer">
+        <Link
+          href={`/services/${service.slug}`}
+          className="block w-full h-full cursor-pointer"
+        >
           <Image
             src={primaryImage}
             alt={service.name}
@@ -144,7 +165,7 @@ export default function ServiceCard({
         )}
         {hasDiscount && (
           <span className="absolute top-3 right-3 bg-[#FF6B6B] text-white text-sm px-4 py-2 rounded-full font-bold shadow-lg">
-            💰 BashWish Discount
+            💰 DEMO Discount
           </span>
         )}
       </div>
@@ -170,7 +191,10 @@ export default function ServiceCard({
             <li>
               {(() => {
                 // Check service discount first
-                if (service.discountPrice && service.discountPrice < service.startingPrice) {
+                if (
+                  service.discountPrice &&
+                  service.discountPrice < service.startingPrice
+                ) {
                   return (
                     <div className="flex items-center gap-2">
                       <span className="text-sm font-bold text-gray-400 line-through">
@@ -182,14 +206,17 @@ export default function ServiceCard({
                     </div>
                   );
                 }
-                
+
                 // Otherwise check package discounts
                 const lowestDiscount = service.packages
-                  ?.filter(pkg => pkg.discountPrice)
-                  .map(pkg => Number(pkg.discountPrice))
+                  ?.filter((pkg) => pkg.discountPrice)
+                  .map((pkg) => Number(pkg.discountPrice))
                   .sort((a, b) => a - b)[0];
-                
-                if (lowestDiscount && lowestDiscount < Number(service.startingPrice)) {
+
+                if (
+                  lowestDiscount &&
+                  lowestDiscount < Number(service.startingPrice)
+                ) {
                   return (
                     <div className="flex items-center gap-2">
                       <span className="text-sm font-bold text-gray-400 line-through">

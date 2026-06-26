@@ -296,7 +296,7 @@ export default function PartyGenieChat() {
           {/* Footer */}
           <div className="bg-[#1C3658] px-4 py-2 border-t-2 border-[#000000] flex-shrink-0">
             <p className="text-xs text-[#FBF2E0] text-center">
-              Powered by AI ✨ | BashWish Party Genie
+              Powered by AI ✨ | DEMO Party Genie
             </p>
           </div>
         </div>
